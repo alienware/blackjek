@@ -22,6 +22,7 @@ And then execute:
 Choose number of decks (4 or more) to bring in play.
 
 ```ruby
+Blackjek.set_up_decks
 Blackjek.start
 ```
 

@@ -17,7 +17,6 @@ module Blackjek
     @cards << Card.new(face_value, suit)
   end
 
-
   def self.start
     game = Game.new(@decks)
     game.begin
@@ -40,23 +39,23 @@ module Blackjek
     self.continue
   end
 
-  private
-    def self.set_up_decks
-      puts "How many decks you gonna play with? (4 or more) \n"
+  def self.set_up_decks
+    puts "How many decks you gonna play with? (4 or more) \n"
 
-      num_decks = gets.to_i
-      unless num_decks >= 4
-        puts "WHY U NO SERIOUS?! :| \n"
-        set_up_decks
-      end
-
-      num_decks.times do
-        @decks << Deck.new(@cards)
-      end
-
-      @num_decks = @decks.length
+    num_decks = gets.to_i
+    unless num_decks >= 4
+      puts "WHY U NO SERIOUS?! :| \n"
+      set_up_decks
     end
 
+    num_decks.times do
+      @decks << Deck.new(@cards)
+    end
+
+    @num_decks = @decks.length
+  end
+
+  private
     def self.continue
       puts "\n"
       puts "Press \n"
@@ -87,6 +86,4 @@ module Blackjek
       puts '*' * 80
       puts "\n"
     end
-
-  self.set_up_decks
 end
