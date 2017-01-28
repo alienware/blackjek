@@ -1,5 +1,7 @@
 # Blackjek
 
+[![Code Climate](https://codeclimate.com/github/alienware/blackjek/badges/gpa.svg)](https://codeclimate.com/github/alienware/blackjek)
+
 ## Installation
 
 Add this line to your application's Gemfile:
