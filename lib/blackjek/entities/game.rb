@@ -33,8 +33,11 @@ class Game
         deal(player)
         print_cards
 
-        if player.score > 21
+        player_score = player.score
+        if player_score > 21
           player.busted = true
+        elsif player_score == 21
+          @player_in = false
         end
       when 'STAND'
         puts '*' * 80
@@ -113,6 +116,7 @@ class Game
         puts "#{card.face_value} of #{card.suit}"
       end
       puts "Player score: #{player.score} \n"
+      puts "Player hit BLACKJACK" if player.score == 21
 
       puts '*' * 80
       puts "Dealer cards: \n"
