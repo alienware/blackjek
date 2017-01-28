@@ -106,6 +106,7 @@ class Game
     def deal blackjeker
       dealt_card = deck_cards.shift
       blackjeker.cards << dealt_card
+      blackjeker.aces_count += 1 if dealt_card.is_ace?
       sleep(0.1)
     end
 

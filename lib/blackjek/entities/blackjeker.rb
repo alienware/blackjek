@@ -9,11 +9,11 @@ class Blackjeker
     @aces_count = 0
   end
 
-  # OPTIMIZE: Store score on Blackjeker object
   def score
     score = 0
     cards.each do |card|
       score += card.score.first
+      # FIXME: Primitive logic, bound to fail with multiple scoring calls
       if score > 21 && aces_count > 0
         @aces_count -= 1
         score -= 10
