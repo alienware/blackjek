@@ -9,11 +9,12 @@ class Game
   attr_accessor :player_in
   attr_accessor :winner
 
+  # TODO: Keyword args
   def initialize decks
     shuffle_decks(decks)
     set_up_dealer
     set_up_player
-    self.winner = nil
+    @winner = nil
   end
 
   def begin

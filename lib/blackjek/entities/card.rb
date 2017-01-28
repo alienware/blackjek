@@ -2,9 +2,12 @@ class Card
   attr_accessor :face_value
   attr_accessor :suit
 
+  # TODO: keyword args
   def initialize face_value, suit
     raise('Invalid card') unless \
       ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'].include?(face_value)
+    raise('Invalid suit') unless \
+      ['D', 'C', 'S', 'H'].include?(suit)
     @face_value = face_value
     @suit = suit
   end
