@@ -29,6 +29,8 @@ Blackjek.start
 
 ## Hacked for RubyConf India 2017 Contest
 
+[Awarded](https://twitter.com/rBharshetty/status/825936373190365184) 1st prize
+
 ## BlackJack
 
 #### Problem Statement:
